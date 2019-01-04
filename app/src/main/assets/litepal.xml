@@ -5,6 +5,6 @@
     <list>
         <mapping class= "com.example.a3nod.coolweather.db.Province"/>
         <mapping class= "com.example.a3nod.coolweather.db.City"/>
-        <mapping class= "com.example.a3nod.coolweather.db.county"/>
+        <mapping class= "com.example.a3nod.coolweather.db.County"/>
     </list>
 </litepal>
