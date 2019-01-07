@@ -1,5 +1,6 @@
 package com.example.a3nod.coolweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.a3nod.coolweather.gson.Forecast;
 import com.example.a3nod.coolweather.gson.Weather;
+import com.example.a3nod.coolweather.service.AutoUpdateService;
 import com.example.a3nod.coolweather.util.HttpUtil;
 import com.example.a3nod.coolweather.util.Utility;
 
@@ -170,5 +172,7 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 }
